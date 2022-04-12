@@ -13,10 +13,10 @@
     <script>
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : 'YOURAPPID',
+          appId      : '',
           cookie     : true,
           xfbml      : true,
-          version    : 'v2.8'
+          version    : 'v13.0'
         });
 
         FB.getLoginStatus(function(response) {
@@ -150,5 +150,3 @@
     </div>
   </body>
 </html>
-© 2022 GitHub, Inc.
-Terms
