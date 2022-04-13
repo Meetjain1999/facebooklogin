@@ -45,12 +45,10 @@
     FB.login(function(response){
 	console.log("Connection Successfull");
 	console.log(response)
+	FB.api('/me/accounts', function(response) {
+      	console.log('Successful login for: ' + response);
+    	});
     }, {scope: 'manage_pages'})
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
   }
 
 </script>
