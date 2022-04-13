@@ -39,11 +39,6 @@
       statusChangeCallback(response);        // Returns the login status.
     });
   };
-
-  FB.login(function(response){
-	console.log("Connection Successfull");
-	console.log(response)
-  }, {scope: 'manage_pages'})
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
@@ -52,6 +47,10 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
+    FB.login(function(response){
+	console.log("Connection Successfull");
+	console.log(response)
+    }, {scope: 'manage_pages'})
   }
 
 </script>
