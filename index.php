@@ -28,7 +28,7 @@
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '',
+      appId      : '655322635547169',
       cookie     : true,                     // Enable cookies to allow the server to access the session.
       xfbml      : true,                     // Parse social plugins on this webpage.
       version    : 'v13.0'           // Use this Graph API version for this call.
@@ -39,6 +39,11 @@
       statusChangeCallback(response);        // Returns the login status.
     });
   };
+
+  FB.login(function(response){
+	console.log("Connection Successfull");
+	console.log(response)
+  }, {scope: 'manage_pages'})
  
   function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
     console.log('Welcome!  Fetching your information.... ');
@@ -62,6 +67,5 @@
 
 <!-- Load the JS SDK asynchronously -->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-<script>setTimeout(function(){checkLoginState()}, 1000)</script>
 </body>
 </html>
