@@ -54,7 +54,7 @@
 
 <!-- The JS SDK Login Button -->
 
-<fb:login-button scope="manage_pages" onlogin="checkLoginState();">
+<fb:login-button scope="public_profile,email,pages_show_list,read_insights" onlogin="checkLoginState();">
 </fb:login-button>
 
 <div id="status">
